@@ -14,27 +14,14 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var mamifero_1 = require("./mamifero");
-var Cachoro = /** @class */ (function (_super) {
-    __extends(Cachoro, _super);
-    function Cachoro() {
-        var _this = _super.call(this) || this;
-        _this.nome = '';
-        return _this;
+var Gato = /** @class */ (function (_super) {
+    __extends(Gato, _super);
+    function Gato() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    Cachoro.prototype.fazerBarulho = function () {
-        console.log('au au au');
+    Gato.prototype.fazerBarulho = function () {
+        console.log("Miau");
     };
-    Cachoro.prototype.andar = function () {
-        _super.prototype.andar.call(this);
-        this.setTamanho('Grande');
-        console.log('Cachoro andando');
-    };
-    Cachoro.prototype.getNome = function () {
-        return this.nome;
-    };
-    Cachoro.prototype.setNome = function (nome) {
-        this.nome = nome;
-    };
-    return Cachoro;
+    return Gato;
 }(mamifero_1.Mamifero));
-exports.Cachoro = Cachoro;
+exports.Gato = Gato;

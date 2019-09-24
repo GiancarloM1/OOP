@@ -23,7 +23,7 @@ var Mamifero = /** @class */ (function (_super) {
         return _this;
     }
     Mamifero.prototype.andar = function () {
-        console.log("Andando");
+        console.log('Mamifero andando');
     };
     Mamifero.prototype.setTamanho = function (tamanho) {
         this.tamanho = tamanho;
@@ -32,7 +32,9 @@ var Mamifero = /** @class */ (function (_super) {
         return this.tamanho;
     };
     Mamifero.prototype.setPeso = function (peso) {
-        this.peso = peso;
+        if (peso > 0) {
+            this.peso = peso;
+        }
     };
     Mamifero.prototype.getPeso = function () {
         return this.peso;
