@@ -1,26 +1,18 @@
 export class Animal {
-    private tamanho : string;
-    private peso : number;
+    private nome : string;
 
-    constructor (){
-        this.tamanho = '';
-        this.peso = 0;
+    constructor(){
+        this.nome = '';
+    } 
+    public getNome() : string {
+        return this.nome; 
     }
-    public setTamanho(tamanho : string){
-        this.tamanho = tamanho;
-    }
-
-    public getTamanho() : string {
-        return this.tamanho;
-    }
-
-    public setPeso(peso : number){
-        if (peso > 0){
-            this.peso = peso;
+    
+    public setNome(nome : string) {
+        if(nome != ''){ 
+            this.nome = nome;
         }
     }
-
-    public getPeso() : number{
-        return this.peso;
-    }
+    
+    
 }
