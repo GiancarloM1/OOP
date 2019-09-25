@@ -1,11 +1,12 @@
 import { Mamifero } from "./mamifero";
 
-export class Gato extends Mamifero {
+export class Baleia extends Mamifero{
+
     constructor(){
         super();
     }
 
     fazerBarulho() : void{
-        console.log('Miau rawr');        
+        console.log('Bloop - Bloop');        
     }
 }
