@@ -13,12 +13,15 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var animal_1 = require("./animal");
-var Mamifero = /** @class */ (function (_super) {
-    __extends(Mamifero, _super);
-    function Mamifero() {
+var mamifero_1 = require("./mamifero");
+var Baleia = /** @class */ (function (_super) {
+    __extends(Baleia, _super);
+    function Baleia() {
         return _super.call(this) || this;
     }
-    return Mamifero;
-}(animal_1.Animal));
-exports.Mamifero = Mamifero;
+    Baleia.prototype.fazerBarulho = function () {
+        console.log('Bloop - Bloop');
+    };
+    return Baleia;
+}(mamifero_1.Mamifero));
+exports.Baleia = Baleia;

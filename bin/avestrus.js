@@ -13,12 +13,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var animal_1 = require("./animal");
-var Mamifero = /** @class */ (function (_super) {
-    __extends(Mamifero, _super);
-    function Mamifero() {
+var ave_1 = require("./ave");
+var Avestrus = /** @class */ (function (_super) {
+    __extends(Avestrus, _super);
+    function Avestrus() {
         return _super.call(this) || this;
     }
-    return Mamifero;
-}(animal_1.Animal));
-exports.Mamifero = Mamifero;
+    return Avestrus;
+}(ave_1.Ave));
+exports.Avestrus = Avestrus;

@@ -17,10 +17,10 @@ var mamifero_1 = require("./mamifero");
 var Gato = /** @class */ (function (_super) {
     __extends(Gato, _super);
     function Gato() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        return _super.call(this) || this;
     }
     Gato.prototype.fazerBarulho = function () {
-        console.log("Miau");
+        console.log('Miau rawr');
     };
     return Gato;
 }(mamifero_1.Mamifero));

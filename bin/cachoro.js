@@ -17,23 +17,10 @@ var mamifero_1 = require("./mamifero");
 var Cachoro = /** @class */ (function (_super) {
     __extends(Cachoro, _super);
     function Cachoro() {
-        var _this = _super.call(this) || this;
-        _this.nome = '';
-        return _this;
+        return _super.call(this) || this;
     }
     Cachoro.prototype.fazerBarulho = function () {
-        console.log('au au au');
-    };
-    Cachoro.prototype.andar = function () {
-        _super.prototype.andar.call(this);
-        this.setTamanho('Grande');
-        console.log('Cachoro andando');
-    };
-    Cachoro.prototype.getNome = function () {
-        return this.nome;
-    };
-    Cachoro.prototype.setNome = function (nome) {
-        this.nome = nome;
+        console.log('Miau rawr');
     };
     return Cachoro;
 }(mamifero_1.Mamifero));
