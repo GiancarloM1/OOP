@@ -5,48 +5,34 @@ export class Jaula{
     private tipo : any;
     private animais: Array<Animal> = [];
 
-    constructor (){
-        this.quantidade = '';
-        this.tipo = '';
+    constructor (quantidade : number, tipo : any){
+        this.quantidade = quantidade;
+        this.tipo = tipo;
         this.animais = [];
     }
 
-    public setQuantidade(quantidade?:any){
-        if(quantidade > 0){
-            this.quantidade = quantidade;
-        }else{
-            return console.error('Quantidade invalida.');
-            
-        }
-        
-    }
-
-    public setTipo(tipo?:any){
-        if(tipo = typeof Animal){
-            this.tipo = tipo;
-        }else{
-            return console.error('Tipo invalido.');
-            
-        }
-    }
-
-    
     public getListaAnimais() : Array<Animal> {
         return this.animais;
     }
     
-    public addAnimalToJaula(animal?:any) {
-        if(animal instanceof this.tipo){
-            this.animais.push(animal);
+    public addAnimalToJaula(animal : any) {
+        if(animal == null || animal == undefined){
+            return false;
+        }
+
+        if(animal instanceof this.tipo  && this.quantidade > this.getLength()){
+            console.log(animal.getNome() +" adicionado")
+            this.animais.push(animal)
+            return false;
+        }
+        else{
+            return true;
         }
     }
     
     public getLength() : number {
-        return this.animais.length +1;
+        return this.animais.length;
     }
-
-
-    
     public getQuantidade() : any {
         return this.quantidade;
     }

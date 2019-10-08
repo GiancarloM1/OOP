@@ -2,7 +2,7 @@ export class Animal {
     private nome : string;
 
     constructor(){
-        this.nome = '';
+        this.nome ='';
     } 
     public getNome() : string {
         return this.nome; 

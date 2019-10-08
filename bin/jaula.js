@@ -1,39 +1,30 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var animal_1 = require("./animal");
 var Jaula = /** @class */ (function () {
-    function Jaula() {
+    function Jaula(quantidade, tipo) {
         this.animais = [];
-        this.quantidade = '';
-        this.tipo = '';
+        this.quantidade = quantidade;
+        this.tipo = tipo;
         this.animais = [];
     }
-    Jaula.prototype.setQuantidade = function (quantidade) {
-        if (quantidade > 0) {
-            this.quantidade = quantidade;
-        }
-        else {
-            return console.error('Quantidade invalida.');
-        }
-    };
-    Jaula.prototype.setTipo = function (tipo) {
-        if (tipo = typeof animal_1.Animal) {
-            this.tipo = tipo;
-        }
-        else {
-            return console.error('Tipo invalido.');
-        }
-    };
     Jaula.prototype.getListaAnimais = function () {
         return this.animais;
     };
     Jaula.prototype.addAnimalToJaula = function (animal) {
-        if (animal instanceof this.tipo) {
+        if (animal == null || animal == undefined) {
+            return false;
+        }
+        if (animal instanceof this.tipo && this.quantidade > this.getLength()) {
+            console.log(animal.getNome() + " adicionado");
             this.animais.push(animal);
+            return false;
+        }
+        else {
+            return true;
         }
     };
     Jaula.prototype.getLength = function () {
-        return this.animais.length + 1;
+        return this.animais.length;
     };
     Jaula.prototype.getQuantidade = function () {
         return this.quantidade;

@@ -3,20 +3,23 @@ import { Animal } from "./animal";
 import { Jacare } from "./jacare";
 
 export class Zoo {
-    private animal : any;
+    private animals : Array<Animal> = [];
     private jaulas: Array<Jaula> = [];
 
     constructor() {
-        this.animal = '';
         this.jaulas = [];
     }
     public addAnimal(animal?:any){
         if(animal instanceof Animal){
-            this.jaulas.forEach(element => {
-                if(animal instanceof element.getTipo  && element.getQuantidade < element.getLength){
-                    element.addAnimalToJaula(animal);
+            for (let index = 0; index < this.jaulas.length; index++) {
+                const element = this.jaulas[index];
+                if(element.addAnimalToJaula(animal)){
+                    continue;
+                }else{
+                    console.log("Animal ADICIONADO COM SUCESSO!!");
+                    break;
                 }
-            });
+            }
         }
     }
     
@@ -24,9 +27,9 @@ export class Zoo {
         if(jaula instanceof Jaula){
             if(jaula.getQuantidade()>0 && jaula.getTipo()!= ''){
                 this.jaulas.push(jaula);
-                console.log('jaula added'+jaula.getTipo())
+                console.log('jaula added'+jaula.getTipo() +' WTF'+jaula.getQuantidade());
             }else{
-                return console.error('Quantidade ou Tipo incorretos');
+                return console.log('Quantidade ou Tipo incorretos');
                 
             }
         }
@@ -35,9 +38,13 @@ export class Zoo {
 
     public listaAnimais(jaula:any) {
         if(jaula instanceof Jaula){
+            
+            console.log('-----------------------');
+            console.log(jaula.getTipo());
             jaula.getListaAnimais().forEach(element => {
-                console.log(element.getNome());
+                console.log(element.getNome())     ;           
             });
+        
         }
         
     }
