@@ -1,9 +1,7 @@
 import { Jaula } from "./jaula";
 import { Animal } from "./animal";
-import { Jacare } from "./jacare";
 
 export class Zoo {
-    private animals : Array<Animal> = [];
     private jaulas: Array<Jaula> = [];
 
     constructor() {
