@@ -4,7 +4,6 @@ var jaula_1 = require("./jaula");
 var animal_1 = require("./animal");
 var Zoo = /** @class */ (function () {
     function Zoo() {
-        this.animals = [];
         this.jaulas = [];
         this.jaulas = [];
     }
@@ -29,7 +28,7 @@ var Zoo = /** @class */ (function () {
                 console.log('jaula added' + jaula.getTipo() + ' WTF' + jaula.getQuantidade());
             }
             else {
-                return console.error('Quantidade ou Tipo incorretos');
+                return console.log('Quantidade ou Tipo incorretos');
             }
         }
     };
